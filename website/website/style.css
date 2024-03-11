@@ -173,6 +173,12 @@ a{
     color: var(--black-color);
     border-bottom: 0.2rem solid transparent;
 }
+.header .auth a{
+    margin: 0 1rem;
+    font-size: 1.6rem;
+    color: var(--black-color);
+    border-bottom: 0.2rem solid transparent;
+}
 
 .header .navbar a.active,
 .header .navbar a:hover{
@@ -180,7 +186,7 @@ a{
     padding-bottom:.5rem ;
 }
 
-.header .buttons button{
+.header .buttons a{
     cursor: pointer;
     font-size: 2.5rem;
     margin-left: 2rem;
