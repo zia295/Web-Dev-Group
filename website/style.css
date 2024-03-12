@@ -21,12 +21,14 @@
 html{
     font-size: 62.5%;
     overflow-x: hidden;
+    height: 100%;
     
     scroll-behavior: smooth;
 }
 
 body{
     background-color: var(--main-color);
+    height: 100%;
 
 }
 
@@ -484,7 +486,7 @@ a{
 .footer {
     background-color:#ccc;
     text-align: center;
-    font-size: 20px;
+    font-size: 20px;  
 }
 
 .footer .search{
@@ -553,7 +555,77 @@ a{
     color: var(--main-color);
 }
 /* ------------------------------------------FOOTER SECTION */
+.form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    justify-content: flex-end;
+    align-items: flex-end;
+}
 
+.form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.form p
+{
+font-size: medium;
+}
+.form p a 
+{
+font-size: medium;
+color: #335192;
+font-weight: bolder;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: medium;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.register-text
+{
+display: flex;
+justify-content: center;
+align-items: center;
+padding-top: 10px;
+}
+.register-text a 
+{
+color: #335192;
+font-weight:100099;
+}
+.btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    color: #fff;
+    background-color: var(--main-color);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #335192;
+}
 /* ------------------------------------------RESPONSIVE SECTION */
 @media (max-width: 991px){
     html{
