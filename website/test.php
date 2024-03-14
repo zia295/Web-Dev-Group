@@ -6,7 +6,7 @@
 </head>
 <body>
 <?php
-echo 3 + 3;
+echo 45 + 45;
 
 ?>
 </body>
