@@ -372,7 +372,6 @@ a{
     height: 50rem;
     object-fit: contain;
 }
-/* img  genel olarak düzenlendi */
 
 .about .row{
     display: flex;
@@ -395,35 +394,7 @@ a{
     padding: 1rem 0;
     line-height: 1.8;
 }
-/* ------------------------------------------ABOUT US SECTION */
-/* ------------------------------------------REVIEW SECTION */
-/* img .box-container ve .box  genel olarak düzenlendi */
 
-.review .box-container .box img{
-    height: 20rem;
-    object-fit: contain ;
-}
-.review .box-container .box p{
-    font-size: 1.5rem;
-    line-height: 1.8;
-    padding: 2rem 0;
-}
-
-.review .box-container .box .user{
-    height: 7rem;
-    object-fit: contain;
-}
-
-.review .box-container .box .h3{
-    padding: 1rem 0;
-    font-size: 2rem;
-    color: var(--main-color);
-}
-
-.review .box-container .box .stars{
-    font-size: 1.5rem;
-    color: gold;
-}
 /* ------------------------------------------REVIEW SECTION */
 
 /* ------------------------------------------CONTACT SECTION */
@@ -678,8 +649,3 @@ font-weight:100099;
 }
 
 
-
-
-
-
-/* ------------------------------------------RESPONSIVE SECTION */
