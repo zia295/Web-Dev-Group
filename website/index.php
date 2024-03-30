@@ -1,4 +1,7 @@
 <?php
+session_start();
+$isLoggedIn = isset($_SESSION['user_id']);
+
 $page_header = <<< HEADER
 <!DOCTYPE html>
 <html lang="en">
@@ -7,78 +10,75 @@ $page_header = <<< HEADER
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    
-    
     <link rel="php" href="test.php">
     <title>Home</title>
 </head>
 HEADER;
- 
+
+echo $page_header;
+
+?>
+
 <body>
-    <header class="header" >
-        <a href="./index.html" class="logo">
+    <header class="header">
+        <a href="./index.php" class="logo">
             <img src="./image/logo.jpg" alt="logo">
         </a>
         <nav class="navbar">
-            <a href="./index.html" class="active">home</a>
-            <a href="./about.html">about</a>     
-            <a href="./events.html">Events</a>   
-            <a href="./contact.html">contact</a>     
+            <a href="./index.php" class="active">home</a>
+            <a href="./about.html">about</a>
+            <a href="./events.html">Events</a>
+            <a href="./contact.html">contact</a>
         </nav>
-        
-        <div class="auth"> 
-             <a href="./register.html">register</a>   
-            <a href="./contact.html">login</a>  
-       
-        
+
+        <div class="auth">
+            <?php if ($isLoggedIn) : ?>
+                <span>Hello <?php echo $_SESSION['user_nickname']; ?></span>
+                <a href="logout.php" class="logout">Logout</a>
+            <?php else : ?>
+                <a href="./register.html">register</a>
+                <a href="./Login.html">login</a>
+            <?php endif; ?>
         </div>
-           
+
     </header>
 
-    
     <section class="home" id="home">
         <div class="content">
-        <h3>CryptoShow</h3>
-        <p>Welcome to the CryptoShow </p>
-        <a href="contact.html" class="btn">Book Event</a>
+            <h3>CryptoShow</h3>
+            <p>Welcome to the CryptoShow</p>
+            <a href="contact.html" class="btn">Book Event</a>
         </div>
     </section>
-    
+
     <section class="menu" id="menu">
         <h1 class="heading">Cryptographic <span>Devices</span></h1>
         <div class="box-container">
             <div class="box">
-
                 <div class="box-head">
                     <img src="./image/Device1.jpg" alt="Jefferson disk">
                     <h3>Jefferson disk</h3>
                     <span>The Jefferson disk, is a cipher system commonly attributed to Thomas Jefferson</span>
                     <span> that uses a set of wheels or disks, each with letters of the alphabet arranged around</span>
                     <span> their edge in an order, which is different for each disk and is usually ordered randomly.</span>
-                   <span> Each disk is marked with a unique number and a hole in the center of the disks allows them to be stacked on an axle. The disks are removable and can be mounted on the axle in any order desired. The order of the disks is the cipher key, and both sender and receiver must arrange the disks in the same predefined order.Once the disks have been placed on the axle in the agreed order, the sender rotates each disk up and down until a desired message is spelled out in one row.</span>
+                    <span> Each disk is marked with a unique number and a hole in the center of the disks allows them to be stacked on an axle. The disks are removable and can be mounted on the axle in any order desired. The order of the disks is the cipher key, and both sender and receiver must arrange the disks in the same predefined order.Once the disks have been placed on the axle in the agreed order, the sender rotates each disk up and down until a desired message is spelled out in one row.</span>
                 </div>
-                
             </div>
             <div class="box">
-
                 <div class="box-head">
                     <img src="./image/Device2.jpg" alt="Enigma">
                     <h3>Enigma</h3>
                     <span>The Enigma was a portable electro-mechanical device using rotors (3 for the army, 4 for the navy) to encrypt and decipher messages. During the Second World War, the British mathematician Turing and his colleagues took up the work of the Polish mathematicians Rejewski, Różycki and Zygalski, who had managed to decipher messages sent by the Enigma using an electro-mechanical device nicknamed the "Rejewski bomb".</span>
                 </div>
-        
             </div>
             <div class="box">
-
                 <div class="box-head">
                     <img src="./image/Device3.jpg" alt="PACE">
                     <h3>PACE</h3>
                     <span>PACE, short for Portable Automatic Cryptographic Equipment, is a handheld terminal for off-line encryption and decryption of tactical messages, developed in the early 1980s by Lehmkuhl in Norway. The device is NATO-approved up to the level of NATO SECRET 1 and is also known as the MI-300 Cryptographic Field Terminal by NFT Crypto from Oslo</span>
                 </div>
-        
             </div>
             <div class="box">
-
                 <div class="box-head">
                     <img src="./image/Device4.jpg" alt="ETCRRM">
                     <h3>ETCRRM</h3>
@@ -87,17 +87,19 @@ HEADER;
             </div>
         </div>
     </section>
-<?php
-<!--$page_footer = <<< FOOTER   this is php-->
-    <section class="footer">
-            <footer>
-                Zia Hassankhail, Kader Zamoulli, Muaaz Patel, Hassan Mojahed, Hassan Choudhry
-            </footer>
-            
-        </div>
-    </section>
-   
 
-<script src="./script.js"></script>
+    <?php
+    $page_footer = <<< FOOTER
+    <section class="footer">
+        <footer>
+            Zia Hassankhail, Kader Zamoulli, Muaaz Patel, Hassan Mojahed, Hassan Choudhry
+        </footer>
+    </section>
+
+    <script src="./script.js"></script>
 </body>
 </html>
+FOOTER;
+
+    echo $page_footer;
+    ?>

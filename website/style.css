@@ -411,6 +411,27 @@ font-weight: bolder;
     font-size: medium;
 }
 
+/* CSS styles for the authentication section */
+.auth {
+    display: flex;
+    align-items: center;
+}
+
+/* Style for the logout link */
+.auth .logout {
+    margin-left: 10px;
+    /* Add some space between "Hello [User]" and the logout link */
+    color: red;
+    /* Change the color of the logout link */
+    text-decoration: none;
+    /* Remove underline from the link */
+}
+
+.auth .logout:hover {
+    text-decoration: underline;
+    /* Add underline when hovering over the logout link */
+}
+
 .form-control {
     width: 100%;
     padding: 10px;

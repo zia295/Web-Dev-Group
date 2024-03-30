@@ -1,32 +1,39 @@
 <?php
-// Check if the form is submitted
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Check if email and password are provided
-    if (isset($_POST["email"]) && isset($_POST["password"])) {
-        // Include your database connection file
-        require_once "DataBase.php";
+session_start();
 
-        // Get user input
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (isset($_POST["email"]) && isset($_POST["password"])) {
+        require_once "DataBase.php";
         $email = $_POST["email"];
         $password = $_POST["password"];
 
-        // Prepare and execute SQL statement to check login credentials
-        $sql = "SELECT * FROM registered_user WHERE user_email = :email";
+    
+        $sql = "SELECT u.*, r.role_name
+                FROM registered_user u
+                JOIN roles r ON u.fk_role_id = r.role_id
+                WHERE u.user_email = :email";
+
         $stmt = $conn->prepare($sql);
         $stmt->bindParam(':email', $email);
         $stmt->execute();
         $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
-        // Verify if user exists and password matches
         if ($user && password_verify($password, $user['user_hashed_password'])) {
-            // Redirect to dashboard upon successful login
-            header("Location: index.html");
+            $userRole = $user['role_name'];
+            $userId = $user['user_id'];
+            $userNickname = $user['user_nickname'];
+
+            // Set session variables
+            $_SESSION['user_id'] = $userId;
+            $_SESSION['user_nickname'] = $userNickname;
+            $_SESSION['user_role'] = $userRole;
+
+            // Redirect to the appropriate page
+            header("Location: index.php");
             exit;
         } else {
-            // Redirect back to login page with error message
             header("Location: Login.html?error=1");
             exit;
         }
     }
 }
-?>
