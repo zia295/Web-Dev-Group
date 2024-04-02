@@ -29,6 +29,7 @@ echo $page_header;
             <a href="./about.html">about</a>
             <a href="./events.html">Events</a>
             <a href="./contact.html">contact</a>
+            <a href="./manage_devices.php">device</a>
         </nav>
 
         <div class="auth">
