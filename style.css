@@ -201,83 +201,6 @@ a{
 
 /* ------------------------------------------HOME SECTION */
 
-/* ------------------------------------------MENU SECTION */
-/* img .box-container ve .box  genel olarak düzenlendi */
-
-.menu .box-container .menu-category{
-    font-size: 1.2rem;
-    text-transform: uppercase;
-}
-
-.menu .box-container .box h3{
-    font-size: 3rem;
-    padding: 1rem 0;
-}
-
-.menu .box-container .box .price{
-    font-size: 2.5rem;
-    padding: 0.5rem 0;
-}
-
-.menu .box-container .box .price span{
-    text-decoration: line-through;
-    font-size: 1.5rem;
-}
-/* ------------------------------------------MENU SECTION */
-
-
-/* ------------------------------------------PRODUCTS SECTION */
-.products .box-container .box .box-head{
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    z-index: 10;
-}
-.products .box-container .box .box-head .title{
-    font-size: 1.4rem;
-}
-
-.products .box-container .box-head .name{
-    font-size: 4rem;
-    font-weight: bold;
-    text-align: start;
-    overflow-wrap: anywhere;
-}
-
-.products .box-container .box .box-bottom{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.products .box-container .box .box-bottom .info{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.products .box-container .box-bottom .info .price{
-    font-size: 3rem;
-}
-.products .box-container .box-bottom .info .amount{
-    font-size: 1.5rem;
-}
-
-.products .box-container  .box-bottom .product-btn a{
-    display: flex; 
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    width: 6.5rem;
-    height: 6.5rem;
-    border: 0.2rem solid var(--main-color);
-}
-
-.products .box-container  .box-bottom .product-btn a i{
-    font-size: 1.6rem;
-    color: var(--main-color);
-}
-
-/* ------------------------------------------PRODUCTS SECTION */
 
 /* ------------------------------------------ABOUT US SECTION */
 .about .row .image{
@@ -310,7 +233,7 @@ a{
     line-height: 1.8;
 }
 
-/* ------------------------------------------REVIEW SECTION */
+
 
 /* ------------------------------------------CONTACT SECTION */
 .contact .row{

@@ -1,48 +1,6 @@
-<?php
-session_start();
-$isLoggedIn = isset($_SESSION['user_id']);
+<?php include 'header.php'; ?>
 
-$page_header = <<< HEADER
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="php" href="test.php">
-    <title>Home</title>
-</head>
-HEADER;
 
-echo $page_header;
-
-?>
-
-<body>
-    <header class="header">
-        <a href="./index.php" class="logo">
-            <img src="./image/logo.jpg" alt="logo">
-        </a>
-        <nav class="navbar">
-            <a href="./index.php" class="active">home</a>
-            <a href="./about.html">about</a>
-            <a href="./events.html">Events</a>
-            <a href="./contact.html">contact</a>
-            <a href="./manage_devices.php">device</a>
-        </nav>
-
-        <div class="auth">
-            <?php if ($isLoggedIn) : ?>
-                <span>Hello <?php echo $_SESSION['user_nickname']; ?></span>
-                <a href="logout.php" class="logout">Logout</a>
-            <?php else : ?>
-                <a href="./register.html">register</a>
-                <a href="./Login.html">login</a>
-            <?php endif; ?>
-        </div>
-
-    </header>
 
     <section class="home" id="home">
         <div class="content">

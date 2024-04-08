@@ -1,12 +1,5 @@
 <?php
-session_start();
-
-// Check if the user is logged in
-if (!isset($_SESSION['user_id'])) {
-    // Redirect the user to the login page if not logged in
-    header("Location: Login.html");
-    exit;
-}
+include 'header.php';
 
 // Include the database connection file
 include 'DataBase.php';

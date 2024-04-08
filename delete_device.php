@@ -1,11 +1,5 @@
 <?php
-session_start();
-
-// Check if the user is logged in
-if (!isset($_SESSION['user_id'])) {
-    header("Location: Login.html");
-    exit;
-}
+ 
 
 // Include the database connection file
 include 'DataBase.php';
