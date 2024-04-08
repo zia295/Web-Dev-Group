@@ -1,6 +1,5 @@
 <?php
-session_start();
-$isLoggedIn = isset($_SESSION['user_id']);
+include 'header.php';
 
 
 // Check if the user is logged in
