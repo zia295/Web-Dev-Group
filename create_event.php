@@ -1,11 +1,5 @@
 <?php
-session_start();
-
-// Check if the user is logged in and is an admin
-if (!isset($_SESSION['user_id']) || $_SESSION['user_role'] != 'admin') {
-    header("Location: index.php");
-    exit;
-}
+include('Header.php');
 
 // Include the database connection file
 require_once 'DataBase.php';

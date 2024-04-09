@@ -1,6 +1,4 @@
-<?php include 'header.php'; ?>
-
-
+<?php include('Header.php');?>
 
     <section class="home" id="home">
         <div class="content">
