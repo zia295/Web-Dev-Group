@@ -104,7 +104,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
     <h1>Edit Device</h1>
 
-    <form method="post" enctype="multipart/form-data">
+    <form class="form-container" method="post" enctype="multipart/form-data">
         <label for="device_name">Device Name:</label>
         <input type="text" name="device_name" id="device_name" value="<?php echo $device['crypto_device_name']; ?>" required>
 

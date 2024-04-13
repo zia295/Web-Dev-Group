@@ -1,6 +1,5 @@
 <?php
 include 'header.php';
-
 // Include the database connection file
 include 'DataBase.php';
 
@@ -21,9 +20,7 @@ $stmt = null;
 </head>
 <body>
     <h1>Manage Devices</h1>
-
-    <a href="create_device.php">Add New Device</a>
-
+    <h2 class="create" href="create_device.php">Add New Device</h2>
     <table>
         <thead>
             <tr>
@@ -34,19 +31,18 @@ $stmt = null;
         </thead>
         <tbody>
             <?php foreach ($devices as $device) : ?>
-                <tr>
-                    <td><?php echo $device['crypto_device_name']; ?></td>
-                    <td><img src="./image/<?php echo $device['crypto_device_image_name']; ?>" alt="Device Image" width="100"></td>
-                    <td>
-                        <a href="view_device.php?id=<?php echo $device['crypto_device_id']; ?>" target="_blank">View</a>
-                        <a href="edit_device.php?id=<?php echo $device['crypto_device_id']; ?>" target="_blank">Edit</a>
-                        <a href="delete_device.php?id=<?php echo $device['crypto_device_id']; ?>" onclick="return confirm('Are you sure you want to delete this device?')">Delete</a>
-                    </td>
-                </tr>
+            <tr>
+                <td><?php echo $device['crypto_device_name']; ?></td>
+                <td><img src="./image/<?php echo $device['crypto_device_image_name']; ?>" alt="Device Image" width="100"></td>
+                <td>
+                    <a href="view_device.php?id=<?php echo $device['crypto_device_id']; ?>">View</a>
+                    <a href="edit_device.php?id=<?php echo $device['crypto_device_id']; ?>">Edit</a>
+                    <a href="delete_device.php?id=<?php echo $device['crypto_device_id']; ?>" onclick="return confirm('Are you sure you want to delete this device?')">Delete</a>
+                </td>
+            </tr>
             <?php endforeach; ?>
         </tbody>
     </table>
-
     <script src="script.js"></script>
 </body>
 </html>

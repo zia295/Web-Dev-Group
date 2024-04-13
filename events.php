@@ -1,85 +1,64 @@
+<?php
+include 'header.php';
+require_once 'Database.php';
+
+// Query to fetch events from the database
+$sql = "SELECT * FROM event";
+$stmt = $conn->query($sql);
+
+if ($stmt->rowCount() > 0) {
+    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+} else {
+    $result = [];
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <?php include 'header.php'; ?>
+ 
 </head>
 <body>
+    <!-- -------------------------------------------PRODUCTS SECTION -->
+    <section class="products" id="products">
+        <h1 class="heading">our <span>Events</span></h1>
+        <div class="box-container">
+            <?php
+            if (!empty($result)) {
+                // Output data of each row
+                foreach ($result as $row) {
+                    echo '<div class="box">';
+                    echo '<div class="box-head">';
+                    echo '<span class="title">' . $row["event_name"] . '</span>';
+                    echo '<a href="#" class="name">' . $row["event_venue"] . '</a>';
+                    echo '</div>';
+                    echo '<div class="image">';
+                    echo '<img src="./image/event3.jfif" alt="' . $row["event_name"] . '">';
+                    echo '</div>';
+                    echo '<div class="box-bottom">';
+                    echo '<div class="info">';
+                    echo '<b class="date">' . $row["event_date"] . '</b>';
+                    echo '</div>';
+                    echo '<div class="product-btn">';
+                    echo '<a href="./images/event1.jpg"></a>';
+                    echo '</div>';
+                    echo '</div>';
+                    echo '</div>';
+                }
+            } else {
+                echo "No events found.";
+            }
+            ?>
+        </div>
+    </section>
+    <!-- -------------------------------------------PRODUCTS SECTION -->
 
-  <!-- -------------------------------------------PRODUCTS SECTION -->
-  <section class="products" id="products">
-    <h1 class="heading">our <span>Events</span> </h1>
-    <div class="box-container">
-        <div class="box">
-            <div class="box-head">
-                <span class="title">Dubai Expo</span>
-                <a href="#" class="name">Dubai</a>
-            </div>
-            <div class="image">
-                <img src="./image/event1.jpg" alt="">
-            </div>
-            <div class="box-bottom">
-                <div class="info">
-                    <b class="price">$50.00</b>
-                </div>
-                <div class="product-btn">
-                    <a href="#">
-                        <i class="fas fa-plus"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="box">
-            <div class="box-head">
-                <span class="title">Africa Expo</span>
-                <a href="#" class="name">Africa</a>
-            </div>
-            <div class="image">
-                <img src="./image/event2.png" alt="">
-            </div>
-            <div class="box-bottom">
-                <div class="info">
-                    <b class="price">$85.00</b>
-                </div>
-                <div class="product-btn">
-                    <a href="#">
-                        <i class="fas fa-plus"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="box">
-            <div class="box-head">
-                <span class="title">Bangladesh expo</span>
-                <a href="#" class="name">Bangladesh</a>
-            </div>
-            <div class="image">
-                <img src="./image/event3.jfif" alt="">
-            </div>
-            <div class="box-bottom">
-                <div class="info">
-                    <b class="price">$90.00</b>
-                </div>
-                <div class="product-btn">
-                    <a href="#">
-                        <i class="fas fa-plus"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- -------------------------------------------PRODUCTS SECTION -->
-
-<!-- -------------------------------------------FOOTER SECTION -->
+    <!-- -------------------------------------------FOOTER SECTION -->
     <section class="footer">
-            <footer>
-                Zia Hassankhail, Kader Zamoulli, Muaaz Patel, Hassan Mojahed, Hassan Choudhry
-            </footer>
-        </div>
+        <footer>Zia Hassankhail, Kader Zamoulli, Muaaz Patel, Hassan Mojahed, Hassan Choudhry</footer>
     </section>
     <!-- -------------------------------------------FOOTER SECTION -->
 
-<script src="./script.js"></script>
-
+    <script src="./script.js"></script>
 </body>
 </html>

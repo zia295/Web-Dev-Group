@@ -82,7 +82,7 @@ $conn = null;
 </head>
 <body>
     <h1>Edit Event</h1>
-    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"] . "?id=" . $event_id); ?>" method="post">
+    <form class="form-container"  action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"] . "?id=" . $event_id); ?>" method="post">
         <div class="form-group <?php echo (!empty($event_name_err)) ? 'has-error' : ''; ?>">
             <label>Event Name</label>
             <input type="text" name="event_name" class="form-control" value="<?php echo $event_name; ?>">
