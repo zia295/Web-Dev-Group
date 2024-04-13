@@ -30,6 +30,7 @@ if ($stmt->rowCount() > 0) {
                     echo '<div class="box">';
                     echo '<div class="box-head">';
                     echo '<span class="title">' . $row["event_name"] . '</span>';
+                    echo '<br></br>';
                     echo '<a href="#" class="name">' . $row["event_venue"] . '</a>';
                     echo '</div>';
                     echo '<div class="image">';

@@ -28,16 +28,13 @@ if ($event_id) {
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>View Event</h1>
-    <?php if ($event) : ?>
-        <div class="event-details">
-            <h2><?php echo $event['event_name']; ?></h2>
-            <p><strong>Date:</strong> <?php echo $event['event_date']; ?></p>
-            <p><strong>Venue:</strong> <?php echo $event['event_venue']; ?></p>
-        </div>
-        <a href="manage_events.php" class="btn btn-secondary">Back to Events</a>
-    <?php else : ?>
-        <p>Event not found.</p>
-    <?php endif; ?>
+  <div class="view-device-container">
+    <div class="view-device-details">
+      <h2 class="event-name"><?php echo $event['event_name']; ?></h2>
+      <p><strong>Date:</strong> <span class="event-date"><?php echo $event['event_date']; ?></span></p>
+      <p><strong>Venue:</strong> <span class="event-venue"><?php echo $event['event_venue']; ?></span></p>
+      <a href="manage_events.php" class="btn">Back to Events</a>
+    </div>
+  </div>
 </body>
 </html>
