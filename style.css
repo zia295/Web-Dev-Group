@@ -287,9 +287,53 @@ a{
     background-color: #fff;
     font-weight: bold;
 }
-/* ------------------------------------------CONTACT SECTION */
+/* Add this to your existing CSS file */
 
+.view-device-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem;
+}
 
+.view-device-details {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.view-device-details h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.view-device-details img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.view-device-details p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.view-device-details a {
+  display: inline-block;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.8rem 1.6rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.view-device-details a:hover {
+  background-color: #0056b3;
+}
 
 /* ------------------------------------------FOOTER SECTION */
 .footer {

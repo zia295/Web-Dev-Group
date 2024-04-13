@@ -25,21 +25,16 @@ if (!$device) {
 
 <!DOCTYPE html>
 <html>
-<head>
-    <title>View Device</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+
 <body>
-    <h1>View Device</h1>
-
-    <div>
-        <h2><?php echo $device['crypto_device_name']; ?></h2>
-        <img src="./image/<?php echo $device['crypto_device_image_name']; ?>" alt="Device Image" width="300">
-        <p>Registered on: <?php echo $device['crypto_device_registered_timestamp']; ?></p>
+  <div class="view-device-container">
+    <div class="view-device-details">
+      <h2><?php echo $device['crypto_device_name']; ?></h2>
+      <img src="./image/<?php echo $device['crypto_device_image_name']; ?>" alt="Device Image">
+      <p>Registered on: <?php echo $device['crypto_device_registered_timestamp']; ?></p>
+      <a href="manage_devices.php">Back to Manage Devices</a>
     </div>
-
-    <a href="manage_devices.php">Back to Manage Devices</a>
-
-    <script src="script.js"></script>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
