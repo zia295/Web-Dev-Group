@@ -25,26 +25,11 @@ echo $page_header;
 ?>
 
 <body>
-    <header class="header">
-        <a href="./index.php" class="logo">
-            <img src="./image/logo.jpg" alt="logo">
-        </a>
-        <nav class="navbar">
-            <a href="./index.php">home</a>
-            <a href="./about.html">about</a>
-            <a href="./events.html">Events</a>
-            <a href="./contact.html">contact</a>
-        </nav>
 
-        <div class="auth">
-            <span>Hello <?php echo $_SESSION['user_nickname']; ?></span>
-            <a href="logout.php" class="logout">Logout</a>
-        </div>
-    </header>
 
     <section class="add-device">
         <h2>Add Device</h2>
-        <form action="process-device.php" method="post" enctype="multipart/form-data">
+        <form class ="form-controll"  action = "createDeviceController.php" method="post" enctype="multipart/form-data">
             <div class="form-group">
                 <label for="device_name">Device Name:</label>
                 <input type="text" id="device_name" name="device_name" required>

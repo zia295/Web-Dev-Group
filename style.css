@@ -565,7 +565,7 @@ td button.delete {
     color: #dc3545; /* Red color */
 }
 
- h2.create {
+ a.create {
     display: inline-block;
     padding: 10px 20px;
     background-color: #007bff; /* Blue color */
@@ -575,7 +575,7 @@ td button.delete {
     transition: background-color 0.3s ease;
 }
 
-h2.create:hover {
+a.create:hover {
     background-color: #0056b3; /* Dark blue color on hover */
     text-decoration: none;
     cursor: pointer;

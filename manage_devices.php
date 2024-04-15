@@ -20,7 +20,7 @@ $stmt = null;
 </head>
 <body>
     <h1>Manage Devices</h1>
-    <h2 class="create" href="create_device.php">Add New Device</h2>
+    <a class="create" href="create_device.php">Add New Device</a>
     <table>
         <thead>
             <tr>

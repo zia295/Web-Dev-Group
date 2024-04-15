@@ -20,7 +20,7 @@ $stmt = null;
 </head>
 <body>
     <h1>Manage Events</h1>
-    <h2 class = "create" href="create_event.php">Create New Event</h2>
+    <a class = "create" href="create_event.php">Create New Event</a>
 
     <?php if (!empty($events)) : ?>
         <table>

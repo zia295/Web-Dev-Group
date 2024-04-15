@@ -4,7 +4,7 @@
         <div class="content">
             <h3>CryptoShow</h3>
             <p>Welcome to the CryptoShow</p>
-            <a href="contact.html" class="btn">Book Event</a>
+            <a href="events.php" class="btn">Book Event</a>
         </div>
     </section>
 
